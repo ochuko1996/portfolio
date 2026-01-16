@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ochuko Samuel George | Frontend & Mobile Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Ochuko Samuel George, a Frontend & Mobile Application Developer specializing in React.js, React Native, and Next.js"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <span class="dot-1"></span>
+        <span class="dot-2"></span>
+        <span class="dot-3"></span>
+      </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#hero">ochuko<span>.dev</span></a>
+          </div>
+          <div class="nav-toggle">
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <!-- Theme Toggle Button -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="animate-text">
+              Hello, I'm <span class="highlight">Ochuko</span>
+            </h1>
+            <div class="hero-job-title">
+              <div class="text-slider">
+                <p>Frontend Developer</p>
+                <p>Mobile App Engineer</p>
+                <p>React.js Expert</p>
+                <p>React Native Developer</p>
+                <p>UI/UX Enthusiast</p>
+              </div>
+            </div>
+            <p class="hero-description">
+              Dynamic Software Engineer with 3+ years of expertise in
+              high-performance web and mobile applications. My projects have
+              increased user engagement by 120% and improved performance by 60%.
+            </p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-wrapper">
+              <img src="assets/img/profile.jpg" alt="Ochuko Samuel George" />
+              <div class="shape-1"></div>
+              <div class="shape-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <a href="#about">
+            <span class="mouse">
+              <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">Scroll Down</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Who I Am</span>
+          <h2 class="title">About Me</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="assets/img/about.jpg" alt="About Ochuko Samuel George" />
+            <div class="experience-badge">
+              <span class="number">3+</span>
+              <span class="text">Years of<br />Experience</span>
+            </div>
+          </div>
+          <div class="about-text">
+            <h3>Frontend & Mobile Application Developer</h3>
+            <p>
+              I'm a passionate Software Engineer specializing in creating
+              engaging user experiences with React.js, React Native, and
+              Next.js. With over 3 years of demonstrated expertise, I architect
+              high-performance web and mobile applications that drive measurable
+              business results.
+            </p>
+            <p>
+              My projects have increased user engagement by up to 120% and
+              improved application performance by up to 60%. I'm skilled in
+              translating complex business requirements into elegant technical
+              solutions while maintaining exceptional code quality.
+            </p>
+            <div class="about-info">
+              <div class="info-item">
+                <span class="label">Name:</span>
+                <span class="value">Ochuko Samuel George</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Email:</span>
+                <span class="value">georgeochuko7@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Location:</span>
+                <span class="value">Abuja, Nigeria</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Languages:</span>
+                <span class="value">English, Urhobo, Yoruba</span>
+              </div>
+            </div>
+            <div class="about-cta">
+              <a href="#" class="btn btn-primary" download>Download CV</a>
+              <div class="social-links">
+                <a
+                  href="https://linkedin.com/in/ochuko-george"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://github.com/ochuko1996"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="mailto:georgeochuko7@gmail.com" class="social-link"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number" data-count="200">0</div>
+            <div class="stat-text">Developers Mentored</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="120">0</div>
+            <div class="stat-text">Engagement Increase</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="60">0</div>
+            <div class="stat-text">Performance Improvement</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="85">0</div>
+            <div class="stat-text">Career Transitions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">My Expertise</span>
+          <h2 class="title">Technical Skills</h2>
+        </div>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3 class="category-title">Frontend Development</h3>
+            <div class="skills-grid">
+              <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <h4 class="skill-name">React.js</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="95"></div>
+                </div>
+              </div>
+              <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <h4 class="skill-name">Next.js</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="90"></div>
+                </div>
+              </div>
+              <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                  <i class="fab fa-js"></i>
+                </div>
+                <h4 class="skill-name">JavaScript</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="95"></div>
+                </div>
+              </div>
+              <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                  <i class="fab fa-js"></i>
+                </div>
+                <h4 class="skill-name">TypeScript</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Mobile Development</h3>
+            <div class="skills-grid">
+              <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <h4 class="skill-name">React Native</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="90"></div>
+                </div>
+              </div>
+              <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                  <i class="fab fa-app-store-ios"></i>
+                </div>
+                <h4 class="skill-name">Expo</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Backend & Database</h3>
+            <div class="skills-grid">
+              <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                  <i class="fab fa-node-js"></i>
+                </div>
+                <h4 class="skill-name">Node.js</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="80"></div>
+                </div>
+              </div>
+              <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <h4 class="skill-name">MongoDB</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="85"></div>
+                </div>
+              </div>
+              <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <h4 class="skill-name">Firebase</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="90"></div>
+                </div>
+              </div>
+              <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <h4 class="skill-name">Django</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-percent="70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">My Portfolio</span>
+          <h2 class="title">Featured Projects</h2>
+        </div>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img
+                src="assets/img/conversation-app.jpg"
+                alt="Kadmap Conversation App"
+              />
+              <div class="project-overlay">
+                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                <a
+                  href="https://github.com/ochuko1996/kadmap-conversation"
+                  class="project-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="project-tag">React.js</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Convex</span>
+              </div>
+              <h3 class="project-title">Kadmap Conversation App</h3>
+              <p class="project-description">
+                Real-time messaging platform built for Kadmap that enables
+                seamless communication between distributors and customers, with
+                99.9% uptime and 40% improved response times.
+              </p>
+            </div>
+          </div>
+          <div class="project-card" data-category="mobile">
+            <div class="project-image">
+              <img src="assets/img/kadmap.jpg" alt="Kadmap Connect" />
+              <div class="project-overlay">
+                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                <a
+                  href="https://github.com/ochuko1996/kadmap-connect"
+                  class="project-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Redux</span>
+              </div>
+              <h3 class="project-title">
+                Kadmap Connect Distribution Ecosystem
+              </h3>
+              <p class="project-description">
+                A comprehensive mobile ecosystem that streamlined operations for
+                500+ distributors and customers.
+              </p>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="assets/img/lachariz.jpg" alt="La Chariz Portfolio" />
+              <div class="project-overlay">
+                <a href="https://lacharizinnovations.com" class="project-link"
+                  ><i class="fas fa-link"></i
+                ></a>
+                <a
+                  href="https://github.com/ochuko1996/lachariz-portfolio"
+                  class="project-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">SCSS</span>
+              </div>
+              <h3 class="project-title">La Chariz Corporate Portfolio</h3>
+              <p class="project-description">
+                A suite of responsive corporate websites that increased online
+                visibility by 120% and user engagement by 45%.
+              </p>
+            </div>
+          </div>
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img src="assets/img/lms.jpg" alt="Learning Management System" />
+              <div class="project-overlay">
+                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                <a href="#" class="project-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="project-tag">React.js</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MongoDB</span>
+              </div>
+              <h3 class="project-title">Learning Management System</h3>
+              <p class="project-description">
+                An interactive educational platform that improved student
+                engagement by 52% and helped 85% of students achieve career
+                transitions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-cta">
+          <a
+            href="https://github.com/ochuko1996"
+            target="_blank"
+            class="btn btn-outline"
+            >View More on GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">My Journey</span>
+          <h2 class="title">Work Experience</h2>
+        </div>
+        <div class="experience-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">February 2024 - Present</div>
+              <h3 class="timeline-title">Software Engineer</h3>
+              <div class="timeline-company">Kadmap Systems Limited</div>
+              <ul class="timeline-description">
+                <li>
+                  Architected and developed
+                  <strong>Kadmap Connect</strong> distribution ecosystem
+                  comprising two React Native mobile applications
+                </li>
+                <li>
+                  Built a real-time conversation application using React,
+                  TypeScript, and Convex DB that improved customer-distributor
+                  communication efficiency by 40%
+                </li>
+                <li>
+                  Engineered a secure file management system with role-based
+                  access control, reducing document retrieval time by 60%
+                </li>
+                <li>
+                  Developed a customer review application that increased client
+                  feedback collection by 75%
+                </li>
+                <li>
+                  Implemented Redux state management architecture for consistent
+                  data flow across multiple interfaces
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">January 2024 - Present</div>
+              <h3 class="timeline-title">Frontend Developer</h3>
+              <div class="timeline-company">La Chariz Group</div>
+              <ul class="timeline-description">
+                <li>
+                  Spearheaded the development of three corporate websites that
+                  collectively increased online visibility by 120%
+                </li>
+                <li>
+                  Designed and implemented responsive UIs with Next.js and
+                  React.js, resulting in a 25% increase in conversion rates
+                </li>
+                <li>
+                  Integrated Firebase backend services, including authentication
+                  and real-time database for seamless experiences
+                </li>
+                <li>
+                  Optimized site performance through lazy loading and code
+                  splitting, improving page load times by 40%
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">March 2021 - January 2024</div>
+              <h3 class="timeline-title">
+                Web Developer & Assistant Instructor
+              </h3>
+              <div class="timeline-company">
+                Dominion Youth Empowerment Network (DYEN)
+              </div>
+              <ul class="timeline-description">
+                <li>
+                  Developed a high-impact web platform that successfully
+                  attracted over 5,000 applicants
+                </li>
+                <li>
+                  Designed an interactive learning management system that
+                  improved student engagement by 52%
+                </li>
+                <li>
+                  Instructed and mentored more than 200 students in web
+                  development, with 85% reporting career transitions
+                </li>
+                <li>
+                  Created comprehensive learning materials covering HTML, CSS,
+                  JavaScript, and React.js
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">June 2020 - February 2021</div>
+              <h3 class="timeline-title">Administrative Assistant</h3>
+              <div class="timeline-company">
+                Foursquare Gospel Church, DST District
+              </div>
+              <ul class="timeline-description">
+                <li>
+                  Managed essential office operations including document
+                  management and report generation
+                </li>
+                <li>
+                  Created detailed financial reports that improved
+                  organizational decision-making processes
+                </li>
+                <li>
+                  Developed a digital filing system that reduced document
+                  retrieval time by 65%
+                </li>
+                <li>
+                  Coordinated logistics for community outreach programs serving
+                  300+ participants monthly
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">My Learning</span>
+          <h2 class="title">Certifications</h2>
+        </div>
+        <div class="certifications-slider">
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-ibm"></i></div>
+            <h3 class="cert-title">
+              Django Application Development with SQL and Databases
+            </h3>
+            <div class="cert-issuer">IBM</div>
+            <div class="cert-date">2024</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-ibm"></i></div>
+            <h3 class="cert-title">
+              Python for Data Science, AI & Development
+            </h3>
+            <div class="cert-issuer">IBM</div>
+            <div class="cert-date">2024</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-ibm"></i></div>
+            <h3 class="cert-title">
+              Developing AI Applications with Python and Flask
+            </h3>
+            <div class="cert-issuer">IBM</div>
+            <div class="cert-date">2024</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-ibm"></i></div>
+            <h3 class="cert-title">Developing Front-End Apps with React</h3>
+            <div class="cert-issuer">IBM</div>
+            <div class="cert-date">2024</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-linkedin"></i></div>
+            <h3 class="cert-title">
+              MongoDB Express React Node.js (MERN) Essential Training
+            </h3>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <div class="cert-date">2023</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-linkedin"></i></div>
+            <h3 class="cert-title">React Authentication</h3>
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <div class="cert-date">2023</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Get In Touch</span>
+          <h2 class="title">Contact Me</h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Location</h3>
+                <p>Abuja, Nigeria</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:georgeochuko7@gmail.com"
+                    >georgeochuko7@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Phone</h3>
+                <p><a href="tel:+2348143939703">(234) 814-393-9703</a></p>
+              </div>
+            </div>
+            <div class="contact-social">
+              <h3>Follow Me</h3>
+              <div class="social-links">
+                <a
+                  href="https://linkedin.com/in/ochuko-george"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://github.com/ochuko1996"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="mailto:georgeochuko7@gmail.com" class="social-link"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="#hero">ochuko<span>.dev</span></a>
+            <p>Frontend & Mobile Application Developer</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-nav">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <h4>Connect</h4>
+              <div class="social-links">
+                <a
+                  href="https://linkedin.com/in/ochuko-george"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://github.com/ochuko1996"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="mailto:georgeochuko7@gmail.com" class="social-link"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Ochuko Samuel George. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
