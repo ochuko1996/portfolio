@@ -723,6 +723,8 @@ const certificationsData = [
   },
 ];
 
+let showAllCertifications = false;
+
 function renderCertifications() {
   const certificationsContainer = document.getElementById(
     "certifications-slider",
@@ -730,7 +732,13 @@ function renderCertifications() {
 
   if (certificationsContainer) {
     certificationsContainer.innerHTML = "";
-    certificationsData.forEach((cert) => {
+
+    // Determine how many certifications to show
+    const certsToShow = showAllCertifications
+      ? certificationsData
+      : certificationsData.slice(0, 3);
+
+    certsToShow.forEach((cert, index) => {
       const certCard = document.createElement("div");
       certCard.className = "cert-card";
 
@@ -766,7 +774,40 @@ function renderCertifications() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", renderCertifications);
+function addCertificationsViewMoreButton() {
+  const certificationsSection = document.querySelector(
+    "#certifications .container",
+  );
+
+  if (certificationsSection && certificationsData.length > 3) {
+    // Check if button already exists
+    let viewMoreBtn = document.getElementById("cert-view-more-btn");
+
+    if (!viewMoreBtn) {
+      viewMoreBtn = document.createElement("div");
+      viewMoreBtn.id = "cert-view-more-btn";
+      viewMoreBtn.className = "cert-view-more";
+      viewMoreBtn.innerHTML = `<button class="btn btn-outline">View More Certifications</button>`;
+      certificationsSection.appendChild(viewMoreBtn);
+
+      viewMoreBtn.querySelector("button").addEventListener("click", () => {
+        showAllCertifications = !showAllCertifications;
+        renderCertifications();
+
+        // Update button text
+        const btnText = showAllCertifications
+          ? "View Less"
+          : "View More Certifications";
+        viewMoreBtn.querySelector("button").textContent = btnText;
+      });
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderCertifications();
+  addCertificationsViewMoreButton();
+});
 
 /*================================================
   DYNAMIC PROJECTS SECTION
