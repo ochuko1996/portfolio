@@ -8,7 +8,7 @@ Abuja, Nigeria | 📱 (234) 814-393-9703 | 📧 georgeochuko7@gmail.com | [Linke
 
 ## PROFESSIONAL SUMMARY
 
-Dynamic Software Engineer with 3+ years of demonstrated expertise in architecting high-performance web and mobile applications. Specialized in React.js, React Native, and Next.js, with a proven track record of increasing user engagement by 45-120% and improving application performance by up to 60%. Skilled in translating complex business requirements into elegant technical solutions while maintaining exceptional code quality. Combines deep technical knowledge with instructional experience, having successfully mentored 200+ developers with an 85% career advancement rate. Consistently delivers scalable, user-centered applications that exceed client expectations in fast-paced Agile environments.
+Dynamic Software Engineer with 4+ years of demonstrated expertise in architecting high-performance web and mobile applications. Specialized in React.js, React Native, and Next.js, with a proven track record of increasing user engagement by 45-120% and improving application performance by up to 60%. Skilled in translating complex business requirements into elegant technical solutions while maintaining exceptional code quality. Combines deep technical knowledge with instructional experience, having successfully mentored 200+ developers with an 85% career advancement rate. Consistently delivers scalable, user-centered applications that exceed client expectations in fast-paced Agile environments.
 
 ---
 
