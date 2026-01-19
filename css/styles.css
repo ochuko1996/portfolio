@@ -316,7 +316,9 @@ button,
   border-radius: 50%;
   opacity: 0;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   z-index: 9999;
 }
 
@@ -1074,6 +1076,32 @@ button,
   margin-bottom: 20px;
 }
 
+/* Custom circular C logo for Coursera certifications */
+.cert-icon-custom {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: var(--shadow-small);
+  transition: var(--transition-fast);
+}
+
+.cert-card:hover .cert-icon-custom {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-medium);
+}
+
+.cert-letter {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-light);
+  font-family: var(--font-primary);
+}
+
 .cert-title {
   font-size: 1.2rem;
   margin-bottom: 15px;
@@ -1092,6 +1120,31 @@ button,
 .cert-date {
   font-size: 0.9rem;
   color: var(--color-dark-300);
+}
+
+.cert-credential {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+.cert-verify-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.cert-verify-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-small);
 }
 
 /* ================================================
