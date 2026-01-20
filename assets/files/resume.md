@@ -1,180 +1,132 @@
-# OCHUKO SAMUEL GEORGE
+# George Ochuko Samuel
 
-**Frontend & Mobile Application Developer**
-
-Abuja, Nigeria | 📱 (234) 814-393-9703 | 📧 georgeochuko7@gmail.com | [LinkedIn](https://linkedin.com/in/ochuko-george) | [GitHub](https://github.com/ochuko1996)
-
----
-
-## PROFESSIONAL SUMMARY
-
-Dynamic Software Engineer with 4+ years of demonstrated expertise in architecting high-performance web and mobile applications. Specialized in React.js, React Native, and Next.js, with a proven track record of increasing user engagement by 45-120% and improving application performance by up to 60%. Skilled in translating complex business requirements into elegant technical solutions while maintaining exceptional code quality. Combines deep technical knowledge with instructional experience, having successfully mentored 200+ developers with an 85% career advancement rate. Consistently delivers scalable, user-centered applications that exceed client expectations in fast-paced Agile environments.
+**Software Engineer**  
+Abuja, Nigeria  
+📞 08143939703 · ✉️ georgeochuko7@gmail.com  
+🔗 [linkedin.com/in/ochuko-george-974501211](https://www.linkedin.com/in/ochuko-george-974501211) · [github.com/ochuko1996](https://github.com/ochuko1996) · [ochukogeorge.vercel.app](https://ochukogeorge.vercel.app)
 
 ---
 
-## PROFESSIONAL EXPERIENCE
+## Professional Summary
 
-### Software Engineer
-
-**Kadmap Systems Limited** | Abuja, Nigeria | February 2024 - Present
-
-- Architected and developed **Kadmap Connect** distribution ecosystem comprising two React Native mobile applications that streamlined operations for 500+ distributors and customers
-- Engineered a secure file management system with role-based access control, reducing document retrieval time by 60%
-- Developed a customer review application that increased client feedback collection by 75% and improved service quality metrics
-- Implemented Redux state management architecture for consistent data flow across multiple application interfaces
-- Collaborated with cross-functional teams in an Agile environment to deliver features on time and within scope
-
-### Frontend Developer
-
-**La Chariz Group** | Abuja, Nigeria | January 2024 - Present
-
-- Spearheaded the development of three corporate websites that collectively increased online visibility by 120% and user engagement by 45%
-- Designed and implemented responsive UIs with Next.js and React.js, resulting in a 25% increase in mobile conversion rates
-- Integrated Firebase backend services, including authentication, real-time database, and cloud functions for seamless user experiences
-- Optimized site performance through lazy loading and code splitting techniques, improving page load times by 40%
-- Implemented SEO best practices, leading to a 60% improvement in search engine rankings for target keywords
-
-### Web Developer & Assistant Instructor
-
-**Dominion Youth Empowerment Network (DYEN)** | Abuja, Nigeria | March 2021 - January 2024
-
-- Developed a high-impact web platform that successfully attracted over 5,000 applicants and reduced registration processing time by 70%
-- Designed and implemented an interactive learning management system that improved student engagement by 52%
-- Instructed and mentored more than 200 students in web development, with 85% reporting successful career transitions
-- Created comprehensive learning materials covering HTML, CSS, JavaScript, React.js, and responsive design principles
-- Organized and conducted practical coding workshops focusing on real-world applications and industry best practices
-
-### Administrative Assistant
-
-**Foursquare Gospel Church, DST District** | Warri, Delta State | June 2020 - February 2021
-
-- Managed essential office operations including document management, report generation, and inventory control
-- Created detailed financial and attendance reports that improved organizational decision-making processes
-- Developed and implemented a digital filing system that reduced document retrieval time by 65%
-- Served as first point of contact for visitors while maintaining professional communication across multiple channels
-- Coordinated logistics for community outreach programs serving 300+ participants monthly
+Results-driven Software Engineer with 3+ years of hands-on experience building scalable web and mobile applications, real-time systems, and user-focused platforms. Skilled in full-stack development using React, React Native, Next.js, TypeScript, Node.js, and ConvexDB. Proven ability to deliver production-ready features, mentor learners, and collaborate remotely to solve real-world problems in education, business, and community platforms. Passionate about clean code, modern tooling, and continuous learning in frontend, mobile, and backend technologies.
 
 ---
 
-## TECHNICAL SKILLS
+## Core Expertise
 
-### Programming Languages & Frameworks
-
-- **Frontend**: React.js, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, SASS/SCSS
-- **Mobile**: React Native, Expo
-- **Backend**: Node.js, Express.js, Python (Django)
-- **State Management**: Redux, Context API, Redux Toolkit
-
-### Development Tools & Platforms
-
-- **Version Control**: Git, GitHub, GitLab
-- **CI/CD**: GitHub Actions, Vercel, Netlify
-- **Package Managers**: npm, Yarn
-- **Testing**: Jest, React Testing Library
-- **Code Quality**: ESLint, Prettier
-
-### Database & Cloud Services
-
-- **Databases**: MongoDB, Firebase Firestore, MySQL
-- **Cloud Platforms**: Firebase, AWS (basics), Vercel
-- **Authentication**: JWT, OAuth, Firebase Auth
-
-### Design & Collaboration
-
-- **Design Tools**: Figma, Adobe XD (basics)
-- **Project Management**: Jira, Trello, Notion
-- **Communication**: Slack, Microsoft Teams
+- **Frontend & Mobile Development**: React.js, React Native, Next.js, TypeScript, Vite
+- **Backend & Real-time**: Node.js, Convex (Reactive Database), REST/GraphQL APIs
+- **State & Data Management**: Redux, Convex real-time sync
+- **Tools & Platforms**: Firebase, CMS integration, cross-platform mobile apps
+- **Teaching & Leadership**: Frontend engineering instruction, course design, student mentoring
+- **Other**: HTML/CSS/JavaScript, WordPress, Python basics, cloud intro
 
 ---
 
-## EDUCATION
+## Professional Experience
 
-### Higher National Diploma (HND) - Computer Science
+**Software Engineer** (Full-time)  
+**Kadmap Systems Limited** — Abuja, Nigeria  
+2024 – 2025
 
-**Citi Polytechnic, Abuja** | _In Progress_
+- Developed _KadMap Connect - Distributor_ and _KadMap Connect - Customer_ mobile applications using React Native and TypeScript, streamlining distribution workflows and customer interactions in an offline-capable enterprise environment.
+- Built and maintained full-stack web applications including Conversations App, File Manager, Review App, and Project Management App with React.js, ConvexDB for real-time data, Node.js backend, and Redux state management.
+- Collaborated with cross-functional teams to ensure responsive, performant UIs and reliable real-time synchronization across web and mobile clients.
 
-- Specialized in Software Engineering and System Analysis
-- Relevant coursework: Advanced Database Systems, Software Engineering, Web Application Development
+**Full Stack Developer** (Freelance/Contract)  
+**Gridintel** — Remote  
+2025
 
-### Ordinary National Diploma (OND) - Computer Science
+- Architected and deployed scalable web applications using React (Vite), Next.js, and TypeScript, delivering responsive, high-performance user interfaces.
+- Designed and integrated a custom CMS for seamless content management and dynamic updates.
+- Built backend infrastructure with Convex DB to enable real-time data handling, subscriptions, and efficient querying.
+- Worked remotely with stakeholders to ship user-friendly, production-ready features.  
+  🔗 https://gridintelrg.com
 
-**Citi Polytechnic, Abuja** | 2023
+**Frontend Developer**  
+**La Chariz Group** — Abuja, Nigeria  
+2024 – 2025
 
-- Graduated with Distinction
-- Relevant coursework: Introduction to Programming, Data Structures, Computer Architecture
+- Developed and managed multiple production websites (lacharizinnovations.com, lacharizinteriors.com, bravort.com) using Next.js, React.js, and Firebase for hosting, authentication, and storage.
+- Implemented responsive designs, optimized performance, and ensured cross-browser compatibility to enhance user experience and site reliability.
 
-### Ordinary National Diploma (OND) - Marine Engineering
+**Instructor – Frontend Engineering & Web Development**  
+**Bravort Institute of Technology and Interior Design** — Abuja, Nigeria  
+2025
 
-**Delta State School of Marine Technology, Burutu** | 2017
+- Designed and delivered curriculum covering HTML, CSS, JavaScript, React.js, modern web technologies, and industry best practices.
+- Mentored students through hands-on projects, code reviews, and problem-solving sessions to build practical, portfolio-ready skills.
+- Fostered collaborative learning environments that emphasized clean code, debugging, and real-world application development.
 
-- Gained technical knowledge in engineering principles and systems maintenance
-- Developed strong problem-solving and analytical skills
+**Web Developer & Assistant Instructor**  
+**Dominion Youth Empowerment Network (DYEN)** — Warri, Delta State  
+2021 – 2024
 
-### Senior School Certificate (WASSCE)
-
-**De Light Academy, Orhuwhorun Town, Warri** | 2015
-
-- Graduated with credits in Mathematics, English, Physics, and Computer Science
-
----
-
-## CERTIFICATIONS
-
-- **IBM**: Django Application Development with SQL and Databases (2024)
-- **IBM**: Python for Data Science, AI & Development (2024)
-- **IBM**: Developing AI Applications with Python and Flask (2024)
-- **IBM**: Developing Front-End Apps with React (2024)
-- **IBM**: Introduction to Cloud Computing (2024)
-- **LinkedIn Learning**: Advanced Node.js Skills - Backend Web Development (2023)
-- **LinkedIn Learning**: MongoDB Express React Node.js (MERN) Essential Training (2023)
-- **LinkedIn Learning**: React Authentication (2023)
-- **LinkedIn Learning**: React Design Patterns (2023)
-- **Dominion Youth Empowerment Network**: Web Development (2021)
-- **African Centre for Leadership and Development**: Leadership School (2021-2022)
+- Engineered a high-traffic website that attracted over 11,500 applicants using modern web technologies.
+- Tutored and mentored 200+ students in web development, design principles, and practical coding workflows.
 
 ---
 
-## NOTABLE PROJECTS
+## Selected Projects (from Portfolio)
 
-### Kadmap Connect Distribution Ecosystem
+**La Chariz Innovations Website**  
+Corporate website with modern, responsive UI for digital services.  
+Technologies: React, Firebase
 
-- Developed two interconnected mobile applications for streamlining product distribution
-- Implemented secure authentication, real-time inventory tracking, and order management
-- Technologies: React Native, TypeScript, Redux, Firebase
+**La Chariz Interiors E-commerce Platform**  
+Full-featured e-commerce site with product listings, cart, and secure payments.  
+Technologies: React, Firebase
 
-### La Chariz Corporate Portfolio
+**Bravort Learning & Certification Platform**  
+Educational platform for course enrollment, payments, and certificate verification.  
+Technologies: React, Firebase
 
-- Built a suite of responsive corporate websites with modern UI/UX principles
-- Integrated content management system for easy content updates by non-technical staff
-- Technologies: Next.js, React.js, SCSS, Firebase
+**DYEN Youth Empowerment Platform**  
+Non-profit website supporting youth training; attracted 11,500+ applicants.  
+Technologies: HTML, CSS, JavaScript
 
-### Learning Management System
-
-- Created an interactive platform for DYEN's educational programs
-- Implemented features including course enrollment, progress tracking, and assessment modules
-- Technologies: React.js, Node.js, MongoDB
-
----
-
-## PROFESSIONAL SKILLS
-
-- **Leadership**: Led development teams of 3-5 members on multiple projects
-- **Communication**: Excellent verbal and written communication skills with technical and non-technical stakeholders
-- **Problem-Solving**: Strong analytical approach to troubleshooting complex issues
-- **Time Management**: Consistently delivered projects on time through effective prioritization
-- **Adaptability**: Quick to learn and implement new technologies as required by project needs
-- **Team Collaboration**: Experienced in pair programming and code review practices
+🔗 Full portfolio: [ochukogeorge.vercel.app](https://ochukogeorge.vercel.app)
 
 ---
 
-## LANGUAGES
+## Certificates (Selected – Focused on Core Skills)
 
-- **English**: Professional proficiency
-- **Urhobo**: Native proficiency
-- **Yoruba**: Conversational proficiency
+- IBM: Developing Front-End Apps with React (2024)
+- IBM: Python for Data Science, AI & Development (2024)
+- IBM: Django Application Development with SQL and Databases (2024)
+- IBM: Developing AI Applications with Python and Flask (2024)
+- IBM: Introduction to Cloud Computing (2024)
+- LinkedIn: Advanced Node.js Skills (Backend Web Development) (2023)
+- LinkedIn: MongoDB Express React Node.js (MERN) Essential Training (2023)
 
 ---
 
-## INTERESTS
+## Technical Stack
 
-Software Development, Open Source Contribution, Technical Writing, Playing Guitar, Football, Reading Tech Blogs
+- **Languages**: JavaScript, TypeScript, Python (basics), HTML/CSS
+- **Frontend/Mobile**: React.js, React Native, Next.js, Vite, Redux
+- **Backend & Database**: Node.js, ConvexDB (real-time), Firebase
+- **Other**: WordPress, Flutter (mobile basics), Microsoft Office
+
+---
+
+## Education
+
+**Higher National Diploma (HND) in Computer Science**  
+Citi Polytechnic, Abuja — 2025
+
+**Ordinary National Diploma (OND) in Computer Science**  
+Citi Polytechnic, Abuja — 2023
+
+---
+
+## Interests
+
+Coding personal projects, reading tech blogs, playing guitar, watching football, mentoring aspiring developers, and exploring AI/mobile development trends.
+
+---
+
+**Referees**  
+Available upon request  
+(or contact Mr. Osazee Festus Samson, Founder DYEN — 08036653057)

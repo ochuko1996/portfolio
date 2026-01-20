@@ -923,6 +923,18 @@ const projectsData = [
     description:
       "Non-profit website that attracted over 5,000 applicants and supported youth training programs in web development and digital skills.",
   },
+  {
+    categories: ["web", "fullstack"],
+    image: "assets/img/gridintel.png",
+    title: "Gridintel Web Platform & CMS",
+    links: {
+      live: "https://gridintelrg.com",
+      github: null,
+    },
+    tags: ["React (Vite)", "Next.js", "ConvexDB", "CMS", "Full Stack"],
+    description:
+      "Scalable web platform built for Gridintel featuring a custom CMS, real-time data handling, and a modern UI. Designed and deployed to support dynamic content management and business growth.",
+  },
 ];
 
 function renderProjects() {
@@ -1063,4 +1075,10 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjectFilters();
   renderProjects();
   initializeProjectFilters();
+
+  // Initialize dynamic year
+  const yearElement = document.getElementById("current-year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 });
