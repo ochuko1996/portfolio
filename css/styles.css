@@ -560,7 +560,7 @@ button,
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   gap: 10px;
@@ -1409,6 +1409,7 @@ button,
   .about-cta,
   .about-info {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .info-item {
@@ -1473,9 +1474,23 @@ button,
   .nav-toggle.active span:last-child {
     transform: rotate(-45deg) translate(7px, -6px);
   }
+
+  .experience-badge {
+    bottom: 10px;
+    right: 10px;
+    padding: 15px;
+  }
+
+  .experience-badge .number {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
   .section {
     padding: 70px 0;
   }
@@ -1489,7 +1504,22 @@ button,
   }
 
   .hero-text h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    /* flex-direction: column; */
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 300px;
   }
 
   .stats-container,
@@ -1501,18 +1531,35 @@ button,
 
   .project-filters {
     flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 
   .timeline-title {
     font-size: 1.5rem;
   }
 
+  .timeline-content {
+    padding-left: 30px;
+  }
+
+  .timeline-marker {
+    width: 15px;
+    height: 15px;
+    left: -7.5px;
+  }
+
   .contact-form-container {
-    padding: 30px;
+    padding: 30px 20px;
   }
 
   .footer-links {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .theme-toggle {
@@ -1521,6 +1568,176 @@ button,
     font-size: 0.9rem;
     right: 50px;
   }
+
+  .about-info {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .cert-card {
+    padding: 20px;
+  }
+
+  .cert-title {
+    font-size: 1.1rem;
+    min-height: auto;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .stats-container {
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-text {
+    font-size: 1rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .experience-badge {
+    position: static;
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  .skill-category {
+    margin-bottom: 20px;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+  }
+
+  .skills-grid,
+  .certifications-slider {
+    gap: 20px;
+  }
+
+  .project-filters {
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 30px;
+  }
+
+  .timeline-title {
+    font-size: 1.3rem;
+  }
+
+  .timeline-company {
+    font-size: 0.9rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    right: 45px;
+  }
+
+  .nav-menu {
+    width: 250px;
+    right: -250px;
+    padding: 80px 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .cert-icon {
+    font-size: 2rem;
+  }
+
+  .cert-icon-custom {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cert-letter {
+    font-size: 1.75rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+
+  /* .scroll-down {
+    display: none;
+  } */
 }
 
 /* Theme Toggle Button */

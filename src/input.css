@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* Custom Animations & Effects - Keep these in CSS */
+@keyframes preloader {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0%,
+  16% {
+    transform: translateY(0);
+  }
+  20%,
+  36% {
+    transform: translateY(-30px);
+  }
+  40%,
+  56% {
+    transform: translateY(-60px);
+  }
+  60%,
+  76% {
+    transform: translateY(-90px);
+  }
+  80%,
+  96% {
+    transform: translateY(-120px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/* Preloader Animation */
+.loader span {
+  animation: preloader 1s infinite alternate ease-in-out;
+}
+
+.loader .dot-1 {
+  animation-delay: 0.2s;
+}
+.loader .dot-2 {
+  animation-delay: 0.4s;
+}
+.loader .dot-3 {
+  animation-delay: 0.6s;
+}
+
+/* Text Slider Animation */
+.text-slider {
+  animation: slide 15s infinite;
+}
+
+/* Scroll Indicator Animation */
+.wheel {
+  animation: scroll 1.5s infinite;
+}
+
+/* Custom Cursor */
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #7c3aed;
+}
+
+.cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #7c3aed;
+}
+
+/* Highlight Effect */
+.highlight::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: #9c69fd;
+  opacity: 0.2;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+/* Nav Link Underline Effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #7c3aed;
+  transition: 0.3s;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Section Subtitle Underline */
+.section-header .subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width: 60%;
+  background-color: #7c3aed;
+  margin: 0 auto;
+}
+
+/* Stat Number Suffix */
+.stat-number::after {
+  content: "%";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+}
+
+.stat-item:nth-child(1) .stat-number::after,
+.stat-item:nth-child(4) .stat-number::after {
+  content: "+";
+}

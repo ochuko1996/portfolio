@@ -25,17 +25,27 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
+    <link href="./src/output.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body
+    class="font-primary leading-relaxed bg-light dark:bg-dark-bg text-dark dark:text-dark-text overflow-x-hidden"
+  >
     <!-- Preloader -->
-    <div class="preloader">
-      <div class="loader">
-        <span class="dot-1"></span>
-        <span class="dot-2"></span>
-        <span class="dot-3"></span>
+    <div
+      class="preloader fixed top-0 left-0 w-full h-full bg-light dark:bg-dark-bg flex justify-center items-center z-10000 transition-opacity duration-500"
+    >
+      <div class="loader flex justify-center items-center">
+        <span
+          class="dot-1 inline-block w-5 h-5 rounded-full mx-1.5 bg-primary"
+        ></span>
+        <span
+          class="dot-2 inline-block w-5 h-5 rounded-full mx-1.5 bg-primary"
+        ></span>
+        <span
+          class="dot-3 inline-block w-5 h-5 rounded-full mx-1.5 bg-primary"
+        ></span>
       </div>
     </div>
 
@@ -44,27 +54,73 @@
     <div class="cursor-dot"></div>
 
     <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <nav class="navbar">
-          <div class="logo">
-            <a href="#hero">ochuko<span>.dev</span></a>
+    <header
+      class="header w-full h-20 fixed top-0 left-0 z-50 transition-fast bg-light dark:bg-dark-bg shadow-small"
+    >
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <nav class="navbar h-20 flex justify-between items-center">
+          <div class="logo text-3xl font-bold font-secondary">
+            <a href="#hero" class="text-dark capitalize dark:text-dark-text"
+              >ochuko<span class="text-primary"> george</span></a
+            >
           </div>
-          <div class="nav-toggle">
-            <span></span>
-            <span></span>
+          <div
+            class="nav-toggle hidden md:flex flex-col justify-between w-[30px] h-5 cursor-pointer z-50"
+          >
+            <span
+              class="block w-full h-0.5 bg-dark dark:bg-dark-text transition-fast"
+            ></span>
+            <span
+              class="block w-full h-0.5 bg-dark dark:bg-dark-text transition-fast"
+            ></span>
           </div>
-          <ul class="nav-menu">
-            <li><a href="#hero" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+          <ul class="nav-menu flex items-center list-none gap-10">
+            <li>
+              <a
+                href="#hero"
+                class="nav-link relative text-dark dark:text-dark-text font-medium"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav-link relative text-dark dark:text-dark-text font-medium"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="nav-link relative text-dark dark:text-dark-text font-medium"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="nav-link relative text-dark dark:text-dark-text font-medium"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="nav-link relative text-dark dark:text-dark-text font-medium"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="nav-link relative text-dark dark:text-dark-text font-medium"
+                >Contact</a
+              >
+            </li>
           </ul>
           <!-- Theme Toggle Button -->
           <button
-            class="theme-toggle"
+            class="theme-toggle relative w-10 h-10 rounded-full bg-primary text-light flex items-center justify-center text-base opacity-100 visible transition-fast z-40 shadow-small cursor-pointer border-0 ml-5 hover:bg-primary-dark hover:-translate-y-1"
             id="themeToggle"
             aria-label="Toggle dark mode"
           >
@@ -75,290 +131,298 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1 class="animate-text">
-              Hello, I'm <span class="highlight">Ochuko</span>
+    <section
+      id="hero"
+      class="hero min-h-screen flex items-center pt-20 pb-32 lg:pb-0 overflow-hidden relative bg-light dark:bg-dark-bg"
+    >
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <div
+          class="hero-content grid grid-cols-1 lg:grid-cols-[6fr_5fr] gap-12 items-center"
+        >
+          <div class="hero-text order-1 lg:order-none text-center lg:text-left">
+            <h1
+              class="animate-text text-6xl lg:text-7xl mb-5 font-bold leading-tight font-secondary relative"
+            >
+              Hello, I'm
+              <span class="highlight relative inline-block text-primary"
+                >Ochuko</span
+              >
             </h1>
-            <div class="hero-job-title">
-              <div class="text-slider">
-                <p>Frontend Developer</p>
-                <p>Mobile App Engineer</p>
-                <p>React.js Expert</p>
-                <p>React Native Developer</p>
-                <p>UI/UX Enthusiast</p>
+            <div class="hero-job-title text-2xl mb-5 h-[30px] overflow-hidden">
+              <div class="text-slider relative">
+                <p class="h-[30px] m-0 p-0 font-medium text-primary">
+                  Frontend Developer
+                </p>
+                <p class="h-[30px] m-0 p-0 font-medium text-primary">
+                  Mobile App Engineer
+                </p>
+                <p class="h-[30px] m-0 p-0 font-medium text-primary">
+                  React.js Expert
+                </p>
+                <p class="h-[30px] m-0 p-0 font-medium text-primary">
+                  React Native Developer
+                </p>
+                <p class="h-[30px] m-0 p-0 font-medium text-primary">
+                  UI/UX Enthusiast
+                </p>
               </div>
             </div>
-            <p class="hero-description">
+            <p class="hero-description text-lg mb-8 max-w-[600px]">
               Dynamic Software Engineer with 4+ years of expertise in
               high-performance web and mobile applications. My projects have
               increased user engagement by 120% and improved performance by 60%.
             </p>
-            <div class="hero-cta">
-              <a href="#projects" class="btn btn-primary">View My Work</a>
-              <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            <div
+              class="hero-cta flex flex-row justify-center lg:justify-start gap-5 mt-10"
+            >
+              <a
+                href="#projects"
+                class="btn btn-primary inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-sm font-medium text-base transition-all duration-fast bg-primary text-light border-2 border-primary hover:bg-primary-dark hover:border-primary-dark hover:-translate-y-1 hover:shadow-medium"
+                >View My Work</a
+              >
+              <a
+                href="#contact"
+                class="btn btn-outline inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-sm font-medium text-base transition-all duration-fast bg-transparent text-dark dark:text-dark-text border-2 border-dark dark:border-dark-text hover:bg-dark hover:text-light hover:-translate-y-1 hover:shadow-medium"
+                >Get in Touch</a
+              >
             </div>
           </div>
-          <div class="hero-image">
-            <div class="image-wrapper">
-              <img src="assets/img/ochuko-dp.jpeg" alt="Ochuko Samuel George" />
-              <div class="shape-1"></div>
-              <div class="shape-2"></div>
+          <div class="hero-image relative order-0 lg:order-none mb-12 lg:mb-0">
+            <div
+              class="image-wrapper relative z-10 rounded-lg overflow-hidden shadow-large"
+            >
+              <img
+                src="assets/img/ochuko-dp.jpeg"
+                alt="Ochuko Samuel George"
+                class="transition-medium hover:scale-105"
+              />
+              <div
+                class="shape-1 absolute w-[200px] h-[200px] bg-primary-light opacity-20 rounded-full -top-12 -right-12 z-0"
+              ></div>
+              <div
+                class="shape-2 absolute w-[300px] h-[300px]border-[15px] border-primary opacity-10 rounded-full -bottom-[70px] -left-[70px] z-0"
+              ></div>
             </div>
           </div>
         </div>
-        <div class="scroll-down">
-          <a href="#about">
-            <span class="mouse">
-              <span class="wheel"></span>
+        <div
+          class="scroll-down hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2.5"
+        >
+          <a href="#about" class="flex flex-col items-center gap-2.5">
+            <span
+              class="mouse w-[30px] h-[50px] border-2 border-dark dark:border-dark-text rounded-[30px] flex justify-center pt-2.5"
+            >
+              <span
+                class="wheel w-1 h-2 bg-dark dark:bg-dark-text rounded-sm"
+              ></span>
             </span>
-            <span class="scroll-text">Scroll Down</span>
+            <span class="scroll-text text-xs tracking-[2px] uppercase"
+              >Scroll Down</span
+            >
           </a>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle">Who I Am</span>
-          <h2 class="title">About Me</h2>
+    <section id="about" class="about py-24 relative">
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <div class="section-header text-center mb-12">
+          <span
+            class="subtitle inline-block text-base font-medium text-primary mb-2.5 uppercase tracking-[2px] relative mt-4"
+            >Who I Am</span
+          >
+          <h2
+            class="title text-dark dark:text-dark-text text-4xl font-bold relative z-10"
+          >
+            About Me
+          </h2>
         </div>
-        <div class="about-content">
-          <div class="about-image">
+        <div
+          class="about-content grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-12 items-center mb-12"
+        >
+          <div class="about-image relative">
             <img
               src="assets/img/ochuko-dp.jpeg"
               alt="About Ochuko Samuel George"
+              class="rounded-lg shadow-medium"
             />
-            <div class="experience-badge">
-              <span class="number">4+</span>
-              <span class="text">Years of<br />Experience</span>
+            <div
+              class="experience-badge absolute -bottom-5 -right-5 bg-primary text-light p-5 rounded-md text-center shadow-medium"
+            >
+              <span class="number text-5xl font-bold block leading-none"
+                >4+</span
+              >
+              <span class="text text-sm leading-snug"
+                >Years of<br />Experience</span
+              >
             </div>
           </div>
           <div class="about-text">
-            <h3>Frontend & Mobile Application Developer</h3>
-            <p>
+            <h3 class="text-3xl mb-5 text-dark dark:text-dark-text">
+              Frontend & Mobile Application Developer
+            </h3>
+            <p class="mb-5">
               I'm a passionate Software Engineer specializing in creating
               engaging user experiences with React.js, React Native, and
               Next.js. With over 4 years of demonstrated expertise, I architect
               high-performance web and mobile applications that drive measurable
               business results.
             </p>
-            <p>
+            <p class="mb-5">
               My projects have increased user engagement by up to 120% and
               improved application performance by up to 60%. I'm skilled in
               translating complex business requirements into elegant technical
               solutions while maintaining exceptional code quality.
             </p>
-            <div class="about-info">
-              <div class="info-item">
-                <span class="label">Name:</span>
+            <div
+              class="about-info grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8 my-8"
+            >
+              <div class="info-item flex items-center">
+                <span
+                  class="label font-semibold text-dark dark:text-dark-text min-w-[120px]"
+                  >Name:</span
+                >
                 <span class="value">Ochuko Samuel George</span>
               </div>
-              <div class="info-item">
-                <span class="label">Email:</span>
+              <div class="info-item flex items-center">
+                <span
+                  class="label font-semibold text-dark dark:text-dark-text min-w-[120px]"
+                  >Email:</span
+                >
                 <span class="value">georgeochuko7@gmail.com</span>
               </div>
-              <div class="info-item">
-                <span class="label">Location:</span>
+              <div class="info-item flex items-center">
+                <span
+                  class="label font-semibold text-dark dark:text-dark-text min-w-[120px]"
+                  >Location:</span
+                >
                 <span class="value">Abuja, Nigeria</span>
               </div>
-              <div class="info-item">
-                <span class="label">Languages:</span>
+              <div class="info-item flex items-center">
+                <span
+                  class="label font-semibold text-dark dark:text-dark-text min-w-[120px]"
+                  >Languages:</span
+                >
                 <span class="value">English, Urhobo, Yoruba</span>
               </div>
             </div>
-            <div class="about-cta">
-              <a href="#" class="btn btn-primary" download>Download CV</a>
-              <div class="social-links">
+            <div class="about-cta flex justify-between items-center mt-8">
+              <a
+                href="#"
+                class="btn btn-primary inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-sm font-medium text-base transition-all duration-fast bg-primary text-light border-2 border-primary hover:bg-primary-dark hover:border-primary-dark hover:-translate-y-1 hover:shadow-medium"
+                download
+                >Download CV</a
+              >
+              <div class="social-links flex gap-4">
                 <a
                   href="https://www.linkedin.com/in/ochuko-george-974501211"
                   target="_blank"
-                  class="social-link"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
                 <a
                   href="https://github.com/ochuko1996"
                   target="_blank"
-                  class="social-link"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
                   ><i class="fab fa-github"></i
                 ></a>
-                <a href="mailto:georgeochuko7@gmail.com" class="social-link"
+                <a
+                  href="mailto:georgeochuko7@gmail.com"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
                   ><i class="fas fa-envelope"></i
                 ></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="stats-container">
-          <div class="stat-item">
-            <div class="stat-number" data-count="200">0</div>
-            <div class="stat-text">Developers Mentored</div>
+        <div
+          class="stats-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
+        >
+          <div
+            class="stat-item text-center p-8 rounded-md bg-grey-100 dark:bg-dark-surface transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-light dark:hover:bg-dark-bg"
+          >
+            <div
+              class="stat-number text-5xl font-bold text-primary mb-2.5 relative"
+              data-count="200"
+            >
+              0
+            </div>
+            <div class="stat-text text-lg text-dark dark:text-dark-text">
+              Developers Mentored
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-count="120">0</div>
-            <div class="stat-text">Engagement Increase</div>
+          <div
+            class="stat-item text-center p-8 rounded-md bg-grey-100 dark:bg-dark-surface transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-light dark:hover:bg-dark-bg"
+          >
+            <div
+              class="stat-number text-5xl font-bold text-primary mb-2.5 relative"
+              data-count="120"
+            >
+              0
+            </div>
+            <div class="stat-text text-lg text-dark dark:text-dark-text">
+              Engagement Increase
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-count="60">0</div>
-            <div class="stat-text">Performance Improvement</div>
+          <div
+            class="stat-item text-center p-8 rounded-md bg-grey-100 dark:bg-dark-surface transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-light dark:hover:bg-dark-bg"
+          >
+            <div
+              class="stat-number text-5xl font-bold text-primary mb-2.5 relative"
+              data-count="60"
+            >
+              0
+            </div>
+            <div class="stat-text text-lg text-dark dark:text-dark-text">
+              Performance Improvement
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-count="85">0</div>
-            <div class="stat-text">Career Transitions</div>
+          <div
+            class="stat-item text-center p-8 rounded-md bg-grey-100 dark:bg-dark-surface transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-light dark:hover:bg-dark-bg"
+          >
+            <div
+              class="stat-number text-5xl font-bold text-primary mb-2.5 relative"
+              data-count="85"
+            >
+              0
+            </div>
+            <div class="stat-text text-lg text-dark dark:text-dark-text">
+              Career Transitions
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle">My Expertise</span>
-          <h2 class="title">Technical Skills</h2>
+    <section
+      id="skills"
+      class="skills py-24 relative bg-grey-100 dark:bg-dark-surface"
+    >
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <div class="section-header text-center mb-12">
+          <span
+            class="subtitle inline-block text-base font-medium text-primary mb-2.5 uppercase tracking-[2px] relative"
+            >My Expertise</span
+          >
+          <h2
+            class="title text-dark dark:text-dark-text text-4xl font-bold relative z-10"
+          >
+            Technical Skills
+          </h2>
         </div>
-        <div class="skills-container" id="skills-container">
+        <div
+          class="skills-container flex flex-col gap-12"
+          id="skills-container"
+        >
           <!-- Skills will be dynamically populated by JS -->
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <!-- <section id="projects" class="projects section">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle">My Portfolio</span>
-          <h2 class="title">Featured Projects</h2>
-        </div>
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="mobile">Mobile</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image">
-              <img
-                src="assets/img/conversation-app.jpg"
-                alt="Kadmap Conversation App"
-              />
-              <div class="project-overlay">
-                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                <a
-                  href="https://github.com/ochuko1996/kadmap-conversation"
-                  class="project-link"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">React.js</span>
-                <span class="project-tag">TypeScript</span>
-                <span class="project-tag">Convex</span>
-              </div>
-              <h3 class="project-title">Kadmap Conversation App</h3>
-              <p class="project-description">
-                Real-time messaging platform built for Kadmap that enables
-                seamless communication between distributors and customers, with
-                99.9% uptime and 40% improved response times.
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-category="mobile">
-            <div class="project-image">
-              <img src="assets/img/kadmap.jpg" alt="Kadmap Connect" />
-              <div class="project-overlay">
-                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                <a
-                  href="https://github.com/ochuko1996/kadmap-connect"
-                  class="project-link"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">React Native</span>
-                <span class="project-tag">TypeScript</span>
-                <span class="project-tag">Redux</span>
-              </div>
-              <h3 class="project-title">
-                Kadmap Connect Distribution Ecosystem
-              </h3>
-              <p class="project-description">
-                A comprehensive mobile ecosystem that streamlined operations for
-                500+ distributors and customers.
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-category="web">
-            <div class="project-image">
-              <img src="assets/img/lachariz.jpg" alt="La Chariz Portfolio" />
-              <div class="project-overlay">
-                <a href="https://lacharizinnovations.com" class="project-link"
-                  ><i class="fas fa-link"></i
-                ></a>
-                <a
-                  href="https://github.com/ochuko1996/lachariz-portfolio"
-                  class="project-link"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">Next.js</span>
-                <span class="project-tag">React</span>
-                <span class="project-tag">SCSS</span>
-              </div>
-              <h3 class="project-title">La Chariz Corporate Portfolio</h3>
-              <p class="project-description">
-                A suite of responsive corporate websites that increased online
-                visibility by 120% and user engagement by 45%.
-              </p>
-            </div>
-          </div>
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image">
-              <img src="assets/img/lms.jpg" alt="Learning Management System" />
-              <div class="project-overlay">
-                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                <a href="#" class="project-link"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">React.js</span>
-                <span class="project-tag">Node.js</span>
-                <span class="project-tag">MongoDB</span>
-              </div>
-              <h3 class="project-title">Learning Management System</h3>
-              <p class="project-description">
-                An interactive educational platform that improved student
-                engagement by 52% and helped 85% of students achieve career
-                transitions.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="projects-cta">
-          <a
-            href="https://github.com/ochuko1996"
-            target="_blank"
-            class="btn btn-outline"
-            >View More on GitHub</a
-          >
-        </div>
-      </div>
-    </section> -->
+
     <section id="projects" class="projects section">
       <div class="container">
         <div class="section-header">
@@ -390,122 +454,199 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience section">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle">My Journey</span>
-          <h2 class="title">Work Experience</h2>
+    <section
+      id="experience"
+      class="experience py-24 relative bg-grey-100 dark:bg-dark-surface"
+    >
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <div class="section-header text-center mb-12">
+          <span
+            class="subtitle inline-block text-base font-medium text-primary mb-2.5 uppercase tracking-[2px] relative"
+            >My Journey</span
+          >
+          <h2
+            class="title text-dark dark:text-dark-text text-4xl font-bold relative z-10"
+          >
+            Work Experience
+          </h2>
         </div>
-        <div class="experience-timeline" id="experience-timeline">
+        <div
+          class="experience-timeline relative max-w-[800px] mx-auto pl-8 md:pl-0 before:content-[''] before:absolute before:left-8 md:before:left-1/2 before:top-0 before:bottom-0 before:w-0.5 before:bg-grey-200 dark:before:bg-dark-border before:-ml-px"
+          id="experience-timeline"
+        >
           <!-- Experience items will be dynamically populated by JS -->
         </div>
       </div>
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="certifications section">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle">My Learning</span>
-          <h2 class="title">Certifications</h2>
+    <section
+      id="certifications"
+      class="certifications py-24 relative bg-light dark:bg-dark-bg"
+    >
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <div class="section-header text-center mb-12">
+          <span
+            class="subtitle inline-block text-base font-medium text-primary mb-2.5 uppercase tracking-[2px] relative"
+            >My Learning</span
+          >
+          <h2
+            class="title text-dark dark:text-dark-text text-4xl font-bold relative z-10"
+          >
+            Certifications
+          </h2>
         </div>
-        <div class="certifications-slider" id="certifications-slider">
+        <div
+          class="certifications-slider grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="certifications-slider"
+        >
           <!-- Certifications will be dynamically populated by JS -->
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-      <div class="container">
-        <div class="section-header">
-          <span class="subtitle">Get In Touch</span>
-          <h2 class="title">Contact Me</h2>
+    <section
+      id="contact"
+      class="contact py-24 relative bg-grey-100 dark:bg-dark-surface"
+    >
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <div class="section-header text-center mb-12">
+          <span
+            class="subtitle inline-block text-base font-medium text-primary mb-2.5 uppercase tracking-[2px] relative"
+            >Get In Touch</span
+          >
+          <h2
+            class="title text-dark dark:text-dark-text text-4xl font-bold relative z-10"
+          >
+            Contact Me
+          </h2>
         </div>
-        <div class="contact-content">
+        <div
+          class="contact-content grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
           <div class="contact-info">
-            <div class="contact-card">
-              <div class="contact-icon">
+            <div
+              class="contact-card flex items-center mb-8 p-6 rounded-md bg-light dark:bg-dark-bg transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-primary group"
+            >
+              <div
+                class="contact-icon w-12 h-12 rounded-full bg-primary text-light text-xl flex items-center justify-center mr-5 group-hover:bg-light group-hover:text-primary transition-fast"
+              >
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div class="contact-details">
-                <h3>Location</h3>
-                <p>Abuja, Nigeria</p>
-              </div>
-            </div>
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h3>Email</h3>
-                <p>
-                  <a href="mailto:georgeochuko7@gmail.com"
-                    >georgeochuko7@gmail.com</a
-                  >
+                <h3
+                  class="text-lg font-bold mb-1 text-dark dark:text-dark-text group-hover:text-light"
+                >
+                  Location
+                </h3>
+                <p
+                  class="text-dark-300 dark:text-dark-muted group-hover:text-light/90"
+                >
+                  Abuja, Nigeria
                 </p>
               </div>
             </div>
-            <div class="contact-card">
-              <div class="contact-icon">
+            <div
+              class="contact-card flex items-center mb-8 p-6 rounded-md bg-light dark:bg-dark-bg transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-primary group"
+            >
+              <div
+                class="contact-icon w-12 h-12 rounded-full bg-primary text-light text-xl flex items-center justify-center mr-5 group-hover:bg-light group-hover:text-primary transition-fast"
+              >
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3
+                  class="text-lg font-bold mb-1 text-dark dark:text-dark-text group-hover:text-light"
+                >
+                  Email
+                </h3>
+                <p
+                  class="text-dark-300 dark:text-dark-muted group-hover:text-light/90"
+                >
+                  georgeochuko7@gmail.com
+                </p>
+              </div>
+            </div>
+            <div
+              class="contact-card flex items-center mb-8 p-6 rounded-md bg-light dark:bg-dark-bg transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-primary group"
+            >
+              <div
+                class="contact-icon w-12 h-12 rounded-full bg-primary text-light text-xl flex items-center justify-center mr-5 group-hover:bg-light group-hover:text-primary transition-fast"
+              >
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div class="contact-details">
-                <h3>Phone</h3>
-                <p><a href="tel:+2348143939703">(234) 814-393-9703</a></p>
+                <h3
+                  class="text-lg font-bold mb-1 text-dark dark:text-dark-text group-hover:text-light"
+                >
+                  Phone
+                </h3>
+                <p
+                  class="text-dark-300 dark:text-dark-muted group-hover:text-light/90"
+                >
+                  +234 816 716 3062
+                </p>
               </div>
             </div>
-            <div class="contact-social">
-              <h3>Follow Me</h3>
-              <div class="social-links">
+            <div class="contact-social mt-10">
+              <h3 class="text-xl font-bold mb-5 text-dark dark:text-dark-text">
+                Follow Me
+              </h3>
+              <div class="social-links flex gap-4">
                 <a
                   href="https://www.linkedin.com/in/ochuko-george-974501211"
                   target="_blank"
-                  class="social-link"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-grey-200 dark:bg-dark-bg text-dark dark:text-dark-text transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
                 <a
                   href="https://github.com/ochuko1996"
                   target="_blank"
-                  class="social-link"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-grey-200 dark:bg-dark-bg text-dark dark:text-dark-text transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
                   ><i class="fab fa-github"></i
                 ></a>
-                <a href="mailto:georgeochuko7@gmail.com" class="social-link"
-                  ><i class="fas fa-envelope"></i
+                <a
+                  href="https://twitter.com/ochukogeorge"
+                  target="_blank"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-grey-200 dark:bg-dark-bg text-dark dark:text-dark-text transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
+                  ><i class="fab fa-twitter"></i
                 ></a>
               </div>
             </div>
           </div>
-          <div class="contact-form-container">
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
+          <div
+            class="contact-form-container p-10 rounded-lg bg-light dark:bg-dark-bg shadow-medium"
+          >
+            <form class="contact-form grid grid-cols-1 gap-5" id="contactForm">
+              <div class="form-group relative">
                 <input
                   type="text"
                   id="name"
-                  name="name"
                   placeholder="Your Name"
                   required
+                  class="w-full p-4 bg-grey-100 dark:bg-dark-surface border border-transparent rounded-sm text-dark dark:text-dark-text transition-fast focus:border-primary focus:bg-light dark:focus:bg-dark-bg"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group relative">
                 <input
                   type="email"
                   id="email"
-                  name="email"
                   placeholder="Your Email"
                   required
+                  class="w-full p-4 bg-grey-100 dark:bg-dark-surface border border-transparent rounded-sm text-dark dark:text-dark-text transition-fast focus:border-primary focus:bg-light dark:focus:bg-dark-bg"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group relative">
                 <input
                   type="text"
                   id="subject"
-                  name="subject"
                   placeholder="Subject"
                   required
+                  class="w-full p-4 bg-grey-100 dark:bg-dark-surface border border-transparent rounded-sm text-dark dark:text-dark-text transition-fast focus:border-primary focus:bg-light dark:focus:bg-dark-bg"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group relative">
                 <textarea
                   id="message"
                   name="message"
@@ -523,49 +664,108 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
+    <footer
+      class="footer bg-dark-100 dark:bg-dark-bg text-light py-12 border-t border-dark-200 dark:border-dark-border"
+    >
+      <div class="container mx-auto px-4 lg:px-0 max-w-[1200px]">
+        <div
+          class="footer-content grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 items-center"
+        >
           <div class="footer-logo">
-            <a href="#hero">ochuko<span>.dev</span></a>
-            <p>Frontend & Mobile Application Developer</p>
+            <a
+              href="#hero"
+              class="text-3xl capitalize font-bold font-secondary text-light"
+              >ochuko<span class="text-primary"> george</span></a
+            >
+            <p class="mt-2.5 text-dark-muted">
+              Frontend & Mobile Application Developer
+            </p>
           </div>
-          <div class="footer-links">
+          <div class="footer-links grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="footer-nav">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+              <h4
+                class="text-lg font-bold mb-5 text-light relative inline-block after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[30px] after:h-0.5 after:bg-primary"
+              >
+                Quick Links
+              </h4>
+              <ul class="list-none">
+                <li class="mb-2.5">
+                  <a
+                    href="#hero"
+                    class="text-dark-muted transition-fast hover:text-primary hover:pl-1.5"
+                    >Home</a
+                  >
+                </li>
+                <li class="mb-2.5">
+                  <a
+                    href="#about"
+                    class="text-dark-muted transition-fast hover:text-primary hover:pl-1.5"
+                    >About</a
+                  >
+                </li>
+                <li class="mb-2.5">
+                  <a
+                    href="#skills"
+                    class="text-dark-muted transition-fast hover:text-primary hover:pl-1.5"
+                    >Skills</a
+                  >
+                </li>
+                <li class="mb-2.5">
+                  <a
+                    href="#projects"
+                    class="text-dark-muted transition-fast hover:text-primary hover:pl-1.5"
+                    >Projects</a
+                  >
+                </li>
+                <li class="mb-2.5">
+                  <a
+                    href="#experience"
+                    class="text-dark-muted transition-fast hover:text-primary hover:pl-1.5"
+                    >Experience</a
+                  >
+                </li>
+                <li class="mb-2.5">
+                  <a
+                    href="#contact"
+                    class="text-dark-muted transition-fast hover:text-primary hover:pl-1.5"
+                    >Contact</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="footer-social">
-              <h4>Connect</h4>
-              <div class="social-links">
+              <h4
+                class="text-lg font-bold mb-5 text-light relative inline-block after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[30px] after:h-0.5 after:bg-primary"
+              >
+                Connect
+              </h4>
+              <div class="social-links flex gap-4">
                 <a
                   href="https://www.linkedin.com/in/ochuko-george-974501211"
                   target="_blank"
-                  class="social-link"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-dark-200 text-light transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
                 <a
                   href="https://github.com/ochuko1996"
                   target="_blank"
-                  class="social-link"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-dark-200 text-light transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
                   ><i class="fab fa-github"></i
                 ></a>
-                <a href="mailto:georgeochuko7@gmail.com" class="social-link"
-                  ><i class="fas fa-envelope"></i
+                <a
+                  href="https://twitter.com/ochukogeorge"
+                  target="_blank"
+                  class="social-link flex items-center justify-center w-10 h-10 rounded-full bg-dark-200 text-light transition-fast hover:bg-primary hover:text-light hover:-translate-y-1"
+                  ><i class="fab fa-twitter"></i
                 ></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 Ochuko Samuel George. All rights reserved.</p>
+        <div
+          class="footer-bottom text-center mt-12 pt-5 border-t border-dark-200 dark:border-dark-border text-dark-muted text-sm"
+        >
+          <p>&copy; 2024 Ochuko Samuel George. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
