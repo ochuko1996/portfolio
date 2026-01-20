@@ -462,23 +462,59 @@ function renderExperience() {
     experienceContainer.innerHTML = ""; // Clear existing content just in case
     experienceData.forEach((item) => {
       const timelineItem = document.createElement("div");
-      timelineItem.className = "timeline-item";
+      timelineItem.className = "timeline-item relative mb-12 last:mb-0";
 
       const descriptionList = item.description
-        .map((desc) => `<li>${desc}</li>`)
+        .map(
+          (desc) =>
+            `<li class="mb-2.5 relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-primary">${desc}</li>`,
+        )
         .join("");
 
       timelineItem.innerHTML = `
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">${item.date}</div>
-          <h3 class="timeline-title">${item.title}</h3>
-          <div class="timeline-company">${item.company}</div>
-          <ul class="timeline-description">
+        <div class="timeline-marker absolute w-5 h-5 bg-primary border-[3px] border-light dark:border-dark-bg rounded-full left-[-10px] md:left-[calc(50%-10px)] top-0 z-10 shadow-small"></div>
+        <div class="timeline-content relative pl-8 md:w-1/2 md:pl-0 md:pr-12 md:text-right md:left-0 md:ml-0 [&:nth-child(even)]:md:left-1/2 [&:nth-child(even)]:md:pl-12 [&:nth-child(even)]:md:pr-0 [&:nth-child(even)]:md:text-left">
+          <div class="timeline-date inline-block px-4 py-1.5 bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text rounded-full text-sm font-medium mb-4 shadow-small">${item.date}</div>
+          <h3 class="timeline-title text-xl font-bold mb-1.5 text-dark dark:text-dark-text">${item.title}</h3>
+          <div class="timeline-company text-lg font-medium text-primary mb-4">${item.company}</div>
+          <ul class="timeline-description list-none p-0 m-0 text-dark-300 dark:text-dark-muted text-base leading-relaxed text-left">
             ${descriptionList}
           </ul>
         </div>
       `;
+
+      // Add specific classes for alternating layout on desktop
+      // Note: The structure here is simplified compared to the CSS version which used complex nth-child selectors
+      // For a true alternating timeline, we need to adjust the HTML structure slightly or use more specific classes
+
+      // Let's adjust the content for alternating layout
+      if (experienceContainer.children.length % 2 === 1) {
+        // Right side item (for desktop)
+        timelineItem.innerHTML = `
+          <div class="timeline-marker absolute w-5 h-5 bg-primary border-[3px] border-light dark:border-dark-bg rounded-full left-[-10px] md:left-[calc(50%-10px)] top-0 z-10 shadow-small"></div>
+          <div class="timeline-content relative pl-8 md:w-1/2 md:ml-[50%] md:pl-12 text-left">
+            <div class="timeline-date inline-block px-4 py-1.5 bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text rounded-full text-sm font-medium mb-4 shadow-small">${item.date}</div>
+            <h3 class="timeline-title text-xl font-bold mb-1.5 text-dark dark:text-dark-text">${item.title}</h3>
+            <div class="timeline-company text-lg font-medium text-primary mb-4">${item.company}</div>
+            <ul class="timeline-description list-none p-0 m-0 text-dark-300 dark:text-dark-muted text-base leading-relaxed">
+              ${descriptionList}
+            </ul>
+          </div>
+        `;
+      } else {
+        // Left side item (for desktop)
+        timelineItem.innerHTML = `
+          <div class="timeline-marker absolute w-5 h-5 bg-primary border-[3px] border-light dark:border-dark-bg rounded-full left-[-10px] md:left-[calc(50%-10px)] top-0 z-10 shadow-small"></div>
+          <div class="timeline-content relative pl-8 md:w-1/2 md:pr-12 md:text-right text-left">
+            <div class="timeline-date inline-block px-4 py-1.5 bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text rounded-full text-sm font-medium mb-4 shadow-small">${item.date}</div>
+            <h3 class="timeline-title text-xl font-bold mb-1.5 text-dark dark:text-dark-text">${item.title}</h3>
+            <div class="timeline-company text-lg font-medium text-primary mb-4">${item.company}</div>
+            <ul class="timeline-description list-none p-0 m-0 text-dark-300 dark:text-dark-muted text-base leading-relaxed text-left md:text-right">
+              ${descriptionList}
+            </ul>
+          </div>
+        `;
+      }
 
       experienceContainer.appendChild(timelineItem);
     });
@@ -527,31 +563,34 @@ function renderSkills() {
     skillsContainer.innerHTML = "";
     skillsData.forEach((categoryData) => {
       const categoryDiv = document.createElement("div");
-      categoryDiv.className = "skill-category";
+      categoryDiv.className = "skill-category mb-8";
 
       const categoryTitle = document.createElement("h3");
-      categoryTitle.className = "category-title";
+      categoryTitle.className =
+        "category-title text-2xl mb-8 text-dark dark:text-dark-text relative pl-4 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[5px] before:h-full before:bg-primary";
       categoryTitle.textContent = categoryData.category;
       categoryDiv.appendChild(categoryTitle);
 
       const skillsGrid = document.createElement("div");
-      skillsGrid.className = "skills-grid";
+      skillsGrid.className =
+        "skills-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8";
 
       categoryData.skills.forEach((skill, index) => {
         const skillCard = document.createElement("div");
-        skillCard.className = "skill-card";
+        skillCard.className =
+          "skill-card p-8 rounded-md bg-grey-100 dark:bg-dark-surface transition-fast text-center hover:-translate-y-1 hover:shadow-medium hover:bg-light dark:hover:bg-dark-bg";
         skillCard.setAttribute("data-aos", "fade-up");
         if (index > 0) {
           skillCard.setAttribute("data-aos-delay", `${index * 100}`);
         }
 
         skillCard.innerHTML = `
-          <div class="skill-icon">
+          <div class="skill-icon text-4xl text-primary mb-5">
             <i class="${skill.icon}"></i>
           </div>
-          <h4 class="skill-name">${skill.name}</h4>
-          <div class="skill-bar">
-            <div class="skill-progress" data-percent="${skill.percent}"></div>
+          <h4 class="skill-name text-lg font-medium mb-4 text-dark dark:text-dark-text">${skill.name}</h4>
+          <div class="skill-bar w-full h-1.5 bg-grey-300 dark:bg-dark-border rounded-sm overflow-hidden">
+            <div class="skill-progress h-full bg-primary rounded-sm w-0 transition-all duration-1500 ease-out" data-percent="${skill.percent}"></div>
           </div>
         `;
 
@@ -740,31 +779,32 @@ function renderCertifications() {
 
     certsToShow.forEach((cert, index) => {
       const certCard = document.createElement("div");
-      certCard.className = "cert-card";
+      certCard.className =
+        "cert-card p-8 text-center rounded-md bg-grey-100 dark:bg-dark-surface transition-fast hover:-translate-y-1 hover:shadow-medium hover:bg-light dark:hover:bg-dark-bg";
 
       let credentialInfo = "";
       if (cert.credentialId) {
-        credentialInfo = `<div class="cert-credential">Credential ID: ${cert.credentialId}</div>`;
+        credentialInfo = `<div class="cert-credential text-sm text-dark-200 dark:text-dark-muted mt-2.5 font-mono">Credential ID: ${cert.credentialId}</div>`;
       }
 
       let verifyButton = "";
       if (cert.verifyLink) {
-        verifyButton = `<a href="${cert.verifyLink}" target="_blank" class="cert-verify-btn">Verify Credential</a>`;
+        verifyButton = `<a href="${cert.verifyLink}" target="_blank" class="cert-verify-btn inline-block mt-4 px-4 py-2 bg-primary text-light rounded-sm text-sm font-medium transition-fast hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-small">Verify Credential</a>`;
       }
 
       // Create custom icon for IBM (Coursera) certifications
       let iconHtml = "";
       if (cert.issuer === "IBM") {
-        iconHtml = `<div class="cert-icon cert-icon-custom"><span class="cert-letter">C</span></div>`;
+        iconHtml = `<div class="cert-icon cert-icon-custom w-[60px] h-[60px] rounded-full bg-primary flex items-center justify-center mx-auto mb-5 shadow-small transition-fast group-hover:scale-110 group-hover:shadow-medium"><span class="cert-letter text-3xl font-bold text-light font-primary">C</span></div>`;
       } else {
-        iconHtml = `<div class="cert-icon"><i class="${cert.icon}"></i></div>`;
+        iconHtml = `<div class="cert-icon text-4xl text-primary mb-5"><i class="${cert.icon}"></i></div>`;
       }
 
       certCard.innerHTML = `
         ${iconHtml}
-        <h3 class="cert-title">${cert.title}</h3>
-        <div class="cert-issuer">${cert.issuer}</div>
-        <div class="cert-date">${cert.date}</div>
+        <h3 class="cert-title text-xl mb-4 min-h-[60px] flex items-center justify-center text-dark dark:text-dark-text">${cert.title}</h3>
+        <div class="cert-issuer font-medium mb-2.5 text-dark-300 dark:text-dark-muted">${cert.issuer}</div>
+        <div class="cert-date text-sm text-dark-300 dark:text-dark-muted">${cert.date}</div>
         ${credentialInfo}
         ${verifyButton}
       `;
@@ -786,8 +826,8 @@ function addCertificationsViewMoreButton() {
     if (!viewMoreBtn) {
       viewMoreBtn = document.createElement("div");
       viewMoreBtn.id = "cert-view-more-btn";
-      viewMoreBtn.className = "cert-view-more";
-      viewMoreBtn.innerHTML = `<button class="btn btn-outline">View More Certifications</button>`;
+      viewMoreBtn.className = "cert-view-more text-center mt-10";
+      viewMoreBtn.innerHTML = `<button class="btn btn-outline inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-sm font-medium text-base transition-all duration-fast bg-transparent text-dark dark:text-dark-text border-2 border-dark dark:border-dark-text hover:bg-dark hover:text-light hover:-translate-y-1 hover:shadow-medium">View More Certifications</button>`;
       certificationsSection.appendChild(viewMoreBtn);
 
       viewMoreBtn.querySelector("button").addEventListener("click", () => {
@@ -894,35 +934,39 @@ function renderProjects() {
     projectsContainer.innerHTML = "";
     projectsData.forEach((project) => {
       const projectCard = document.createElement("div");
-      projectCard.className = "project-card";
+      projectCard.className =
+        "project-card relative rounded-md overflow-hidden bg-grey-100 dark:bg-dark-surface transition-fast hover:-translate-y-1 hover:shadow-medium group";
       // Store categories as a comma-separated string for filtering
       projectCard.setAttribute("data-categories", project.categories.join(","));
 
       const tagsHtml = project.tags
-        .map((tag) => `<span class="project-tag">${tag}</span>`)
+        .map(
+          (tag) =>
+            `<span class="project-tag inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">${tag}</span>`,
+        )
         .join("");
 
       let linksHtml = "";
       if (project.links.live) {
-        linksHtml += `<a href="${project.links.live}" class="project-link" target="_blank"><i class="fas fa-link"></i></a>`;
+        linksHtml += `<a href="${project.links.live}" class="project-link w-10 h-10 rounded-full bg-light text-primary flex items-center justify-center text-lg transition-fast hover:bg-primary hover:text-light" target="_blank"><i class="fas fa-link"></i></a>`;
       }
       if (project.links.github) {
-        linksHtml += `<a href="${project.links.github}" class="project-link" target="_blank"><i class="fab fa-github"></i></a>`;
+        linksHtml += `<a href="${project.links.github}" class="project-link w-10 h-10 rounded-full bg-light text-primary flex items-center justify-center text-lg transition-fast hover:bg-primary hover:text-light" target="_blank"><i class="fab fa-github"></i></a>`;
       }
 
       projectCard.innerHTML = `
-        <div class="project-image">
-          <img src="${project.image}" alt="${project.title}" height="100%" />
-          <div class="project-overlay">
+        <div class="project-image relative h-[200px] overflow-hidden">
+          <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover transition-medium group-hover:scale-110" />
+          <div class="project-overlay absolute top-0 left-0 w-full h-full bg-primary/90 flex items-center justify-center gap-4 opacity-0 transition-fast group-hover:opacity-100">
             ${linksHtml}
           </div>
         </div>
-        <div class="project-info">
-          <div class="project-tags">
+        <div class="project-info p-6">
+          <div class="project-tags flex flex-wrap gap-2 mb-4">
             ${tagsHtml}
           </div>
-          <h3 class="project-title">${project.title}</h3>
-          <p class="project-description">${project.description}</p>
+          <h3 class="project-title text-xl font-bold mb-2.5 text-dark dark:text-dark-text">${project.title}</h3>
+          <p class="project-description text-dark-300 dark:text-dark-muted mb-4 text-sm leading-relaxed">${project.description}</p>
         </div>
       `;
 
@@ -955,7 +999,8 @@ function renderProjectFilters() {
 
     // Always add "All" button first
     const allButton = document.createElement("button");
-    allButton.className = "filter-btn active";
+    allButton.className =
+      "filter-btn active px-5 py-2 rounded-full border-none bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text font-medium cursor-pointer transition-fast hover:bg-primary hover:text-light [&.active]:bg-primary [&.active]:text-light";
     allButton.setAttribute("data-filter", "all");
     allButton.textContent = "All";
     filterContainer.appendChild(allButton);
@@ -963,11 +1008,14 @@ function renderProjectFilters() {
     // Add buttons for each category that exists in the data
     const sortedCategories = Array.from(allCategories).sort();
     sortedCategories.forEach((category) => {
-      const button = document.createElement("button");
-      button.className = "filter-btn";
-      button.setAttribute("data-filter", category);
-      button.textContent = categoryNames[category] || category;
-      filterContainer.appendChild(button);
+      if (categoryNames[category]) {
+        const button = document.createElement("button");
+        button.className =
+          "filter-btn px-5 py-2 rounded-full border-none bg-grey-200 dark:bg-dark-surface text-dark dark:text-dark-text font-medium cursor-pointer transition-fast hover:bg-primary hover:text-light [&.active]:bg-primary [&.active]:text-light";
+        button.setAttribute("data-filter", category);
+        button.textContent = categoryNames[category];
+        filterContainer.appendChild(button);
+      }
     });
   }
 }
