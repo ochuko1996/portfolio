@@ -1739,6 +1739,11 @@ button,
   /* .scroll-down {
     display: none;
   } */
+
+  .cursor-dot,
+  .cursor-dot-outline {
+    display: none;
+  }
 }
 
 /* Theme Toggle Button */
