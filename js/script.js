@@ -211,21 +211,17 @@ if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Get form values
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // Validate form
     let isValid = true;
 
     if (name === "") {
       showError("name", "Please enter your name");
       isValid = false;
-    } else {
-      removeError("name");
-    }
+    } else removeError("name");
 
     if (email === "") {
       showError("email", "Please enter your email");
@@ -233,40 +229,42 @@ if (contactForm) {
     } else if (!isValidEmail(email)) {
       showError("email", "Please enter a valid email");
       isValid = false;
-    } else {
-      removeError("email");
-    }
+    } else removeError("email");
 
     if (subject === "") {
       showError("subject", "Please enter a subject");
       isValid = false;
-    } else {
-      removeError("subject");
-    }
+    } else removeError("subject");
 
     if (message === "") {
       showError("message", "Please enter your message");
       isValid = false;
-    } else {
-      removeError("message");
-    }
+    } else removeError("message");
 
-    // If form is valid, submit it (in a real application, you'd send this to a server)
-    if (isValid) {
-      // Show success message
-      const successMessage = document.createElement("div");
-      successMessage.className = "success-message";
-      successMessage.textContent = "Your message has been sent successfully!";
-      contactForm.appendChild(successMessage);
+    if (!isValid) return;
 
-      // Reset form
-      contactForm.reset();
+    // 🔥 SEND VIA EMAILJS
+    emailjs
+      .send("service_a53tanx", "template_1kgr1os", {
+        name,
+        email,
+        subject,
+        message,
+      })
+      .then(() => {
+        const successMessage = document.createElement("div");
+        successMessage.className = "success-message";
+        successMessage.textContent = "Your message has been sent successfully!";
+        contactForm.appendChild(successMessage);
 
-      // Remove success message after a few seconds
-      setTimeout(() => {
-        successMessage.remove();
-      }, 5000);
-    }
+        contactForm.reset();
+
+        setTimeout(() => successMessage.remove(), 5000);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message. Please try again.");
+      });
   });
 }
 

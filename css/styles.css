@@ -171,6 +171,7 @@ button,
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
+  margin-top: 40px;
 }
 
 .section-header .subtitle::after {
